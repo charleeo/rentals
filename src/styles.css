@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+
+
+*{
+    padding: 0;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    color: #0a0a0a;
+    transition: all 1s;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

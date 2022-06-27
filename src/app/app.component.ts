@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rerntals';
+  onActivate(event:any) {
+    window.scrollTo(0,0);
+}
 }

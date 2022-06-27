@@ -1,0 +1,104 @@
+.main_fold{
+    background: url('../../../assets/background_images/bg3.jpg'),#713b83;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_heading{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-shadow: 2px 3px #713b83;
+}
+
+.sell_out{
+    color: #b7b1b9;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 3rem;
+    text-overflow: clip;
+
+}
+.learn_more{
+    background: #ffffff;
+    padding: 1.5rem;
+    border: 0px;
+    border-radius: 10px;
+    color: #44194c;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.learn_more:hover{
+    background: #ffc0cb;
+    transition: all 1s ease-in-out;
+    color: #000000;
+}
+img{
+    width: 60%;
+    height: 100%;
+}
+
+.second_fold{
+    height: 70vh;
+    padding: 2rem;
+    background: url('../../../assets/background_images/undraw5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step_instruction_heading{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    /* flex:2; */
+    line-height: 2;
+}
+
+.steps{
+    /* flex:8; */
+}
+.steps>ol>li{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin: 12px auto;
+}
+
+.third_fold{
+    background: url('../../../assets/background_images/undraw7.png'),#b3aeae;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-blend-mode: overlay;
+}
+.third_fold>p{
+    font-size: 2rem;
+    line-height: 3;
+
+}

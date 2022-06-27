@@ -1,0 +1,7 @@
+.active-link{
+    color: #4559f0 !important;
+}
+a:hover{
+    color: #1e1e1f34;
+    transition: all 1s;
+}

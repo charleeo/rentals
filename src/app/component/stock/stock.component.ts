@@ -50,8 +50,15 @@ export class StockComponent implements OnInit {
       arrivalDate: [this.today, [Validators.nullValidator]],
       soldDate: [this.today, [Validators.nullValidator]],
       costPrice: ['', [Validators.required, Validators.pattern(/\-?\d*\.?\d{1,2}/)]],
+      salesPrice: ['', [Validators.nullValidator, Validators.pattern(/\-?\d*\.?\d{1,2},/)]],
+      logisticCost: ['', [Validators.nullValidator, Validators.pattern(/\-?\d*\.?\d{1,2},/)]],
+      profit: ['', [Validators.nullValidator, Validators.pattern(/\-?\d*\.?\d{1,2},/)]],
+      qtyReceived: ['', [Validators.required, Validators.pattern(/\-?\d*\.?\d{1,2},/)]],
+      qtySold: ['', [Validators.required, Validators.pattern(/\-?\d*\.?\d{1,2},/)]],
+      
+      qtyLeft: ['', [Validators.nullValidator, Validators.pattern(/\-?\d*\.?\d{1,2},/)]],
+      stockCategoryId: ['', [Validators.required, Validators.pattern(/\-?\d*\.?\d{1,2},/)]],
     });
-
   }
   
   onSubmit(formData:any) {
@@ -67,6 +74,13 @@ export class StockComponent implements OnInit {
       arrival_date: formData.arrivalDate,
       sold_date: formData.soldDate,
       cost_price: formData.costPrice,
+      sales_price: formData.salesPrice,
+      logistics_cost: formData.logisticCost,
+      profit: formData.logisticCost,
+      quntity_received: formData.qtyReceived,
+      quntity_sold: formData.qtySold,
+      quntity_left: formData.qtyLeft,
+      stock_category_id: formData.stockCategoryId,
     };
 
     this.postData(obj);

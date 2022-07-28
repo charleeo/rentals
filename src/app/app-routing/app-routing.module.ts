@@ -4,10 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../component/home/home.component';
 import { RegisterComponent } from '../component/register/register.component';
 import { LoginComponent } from './../component/login/login.component';
-import { DashboardComponent } from '../dashboard/dashboard.component';
+import { DashboardComponent } from '../component/dashboard/dashboard.component';
 import { AuthGuard } from '../guard/auth.guard';
 import { PageNotFoundComponent } from '../component/page-not-found/page-not-found.component';
 import { LogoutComponent } from '../component/logout/logout.component';
+import { StockcategoryComponent } from '../component/stockcategory/stockcategory.component';
+import { StockComponent } from '../component/stock/stock.component';
 
 const routes:Routes=[
   {
@@ -34,6 +36,12 @@ const routes:Routes=[
     path:"dashboard", component:DashboardComponent, canActivate:[AuthGuard]
   },
   {
+    path:"stockcategory/create", component:StockcategoryComponent
+  },
+  {
+    path:"stock/create", component:StockComponent, canActivate:[AuthGuard]
+  },
+  {
     path:"**", component:PageNotFoundComponent
   }
 ]
@@ -42,7 +50,7 @@ const routes:Routes=[
 @NgModule({
   declarations: [],
   imports: [
-RouterModule.forRoot(routes)
+RouterModule.forRoot(routes,{useHash:true}),
   ],
   exports:[RouterModule]
 })

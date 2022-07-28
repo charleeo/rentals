@@ -98,7 +98,6 @@ export class RegisterComponent implements OnInit {
         this.loading=true
         this.httpClient.post<any>(this.apiUrl, jsonData, { headers: reqHeader }).subscribe(data => {
           
-          
           if (data.status === true) {
             this.loading=false
             this.registerForm.reset();
@@ -115,7 +114,7 @@ export class RegisterComponent implements OnInit {
               showConfirmButton: true,
               timer: 5000
             });
-            // this.router.navigate(['/adminusers'])
+            this.router.navigate(['/login'])
     
           } else {
             

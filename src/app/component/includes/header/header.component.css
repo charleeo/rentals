@@ -5,3 +5,8 @@ a:hover{
     color: #1e1e1f34;
     transition: all 1s;
 }
+nav{
+    height: 10vh;
+    background: #ffffff !important;
+    box-shadow:6px 16px #5f5f5d
+}

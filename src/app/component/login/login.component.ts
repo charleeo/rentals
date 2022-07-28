@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   password:string
   loading :boolean = false;
   email:string
-  title:string="Logininto account"
+  title:string="Login into account"
   loggedIn:boolean=false
 
   constructor(
@@ -34,14 +34,14 @@ export class LoginComponent implements OnInit {
     private titleService: Title,
     private route: ActivatedRoute,
     private router:Router,
-    private service:AuthService
+    private authService:AuthService
     // private sess: SessionService,
 
   ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title)
-    if(this.service.isAthenticated){
+    if(this.authService.isAthenticated){
       this.router.navigate(['/'])
     }
     this.initialiseForms();
@@ -99,7 +99,7 @@ export class LoginComponent implements OnInit {
             const userObject = JSON.stringify(data.response.user);
             localStorage.setItem(environment.userData, userObject)
             this.loggedIn=true;
-            this.service.updateLoggedInStatus(this.loggedIn);//update the authservice to update the header component
+            this.authService.updateLoggedInStatus(this.loggedIn);//update the authservice to update the header component
             Swal.fire({
               icon: 'success',
               title: 'Success',

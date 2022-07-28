@@ -7,8 +7,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
  public logginStatus: boolean = false;
+ public sidebarViewStatus: boolean = false;
   private loggedInStatus = new BehaviorSubject(this.logginStatus)
+  private sidebarStatus = new BehaviorSubject(this.sidebarViewStatus)
   currentLoggedStatus = this.loggedInStatus.asObservable();
+  currentSidebarViewStatus = this.sidebarStatus.asObservable();
 
   constructor() { }
   
@@ -19,5 +22,9 @@ export class AuthService {
 
   updateLoggedInStatus(status: boolean) {
     this.loggedInStatus.next(status)
+  }
+
+  updateSidebarViewStatus(status: boolean) {
+    this.sidebarStatus.next(status)
   }
 }

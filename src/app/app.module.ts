@@ -12,11 +12,14 @@ import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './component/login/login.component';
 import { AuthService } from './services/auth.service';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { LogoutComponent } from './component/logout/logout.component';
 import { HeaderComponent } from './component/includes/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidebarComponent } from './component/includes/sidebar/sidebar.component';
+import { StockcategoryComponent } from './component/stockcategory/stockcategory.component';
+import { StockComponent } from './component/stock/stock.component';
 
 
 
@@ -29,7 +32,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     DashboardComponent,
     LogoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent,
+    StockcategoryComponent,
+    StockComponent
   ],
   imports: [
 BrowserModule,
